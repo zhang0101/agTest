@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h2 (click)="toHead()">改变传值</h2>
+<input [(ngModel)]="inputValue" type="text" [appHighlight] = "'red'" (outer)="runParent($event)">
+<app-header [msg]="title" (outer)="runParent($event)" #headerFunc></app-header>
+<!--<app-breadcrumb></app-breadcrumb>-->
+<div  [@routeAnimation]="routerState">
+  <router-outlet></router-outlet>
+</div>

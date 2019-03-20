@@ -1,0 +1,6 @@
+<p>
+  <a [routerLink]="['test1']" [routerLinkActive]="'active'" (click)="getState(o)">内容展示test</a>
+</p>
+<div>
+  <router-outlet #o ="outlet"></router-outlet>
+</div>

@@ -1,0 +1,11 @@
+<div>
+  <input [(ngModel)]="showData" type="text" (keyup)="keyUpEvent($event)">
+  <ul [ngSwitch]="showData">
+    <li *ngSwitchCase="'1'">Data--->>>>>111</li>
+    <li *ngSwitchCase="'2'">Data--->>>>>222</li>
+    <li *ngSwitchCase="'3'">Data--->>>>>333</li>
+    <li *ngSwitchDefault>Data--->>>>>默认</li>
+  </ul>
+  <br>
+  <button (click)="start()" [@heroState]="boxState">angular 动画练习</button>
+</div>
