@@ -4,11 +4,12 @@
   <a routerLink="about" [routerLinkActive]="'active'">about</a>
 </h2>
 -->
+<nz-breadcrumb [nzAutoGenerate]="true"></nz-breadcrumb>
 <div>
   <h2 (click)="postMsg()">{{msg}}</h2>
   <span *ngFor="let item of headerList;let index=index">
-    <a [routerLink]="item.path" [routerLinkActive]="'active'" (click)="changeColor()"
-       [classList]="['index_'+index,'any']" [ngClass]="{'yellow':setColor}">{{item.name}}</a>
+    <a [routerLink]="item.path" [routerLinkActive]="'active'" [queryParams]="{id:'zhangzhen'}" (click)="changeColor()"
+       [classList]="['index_'+index,'any']">{{item.name}}</a>
     <span *ngIf="index!==headerList.length-1">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
   </span>
 </div>
@@ -19,7 +20,8 @@
 
 <br>
 <br>
-<p> {{ sex | sexReform:10 }}</p>
+<p (click)="go_home()"> {{ sex | sexReform:10 }}</p>
+
 <p class="{{ sex | sexReform:10 }}"></p>
 <br>
 <!--<div>

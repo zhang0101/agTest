@@ -10,6 +10,7 @@ import {
   OnChanges,
   AfterViewChecked
 } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -38,7 +39,7 @@ export class HeaderComponent implements OnInit, AfterViewChecked, OnChanges, OnD
   @Input() a: string;
   @Output() private outer = new EventEmitter<string>();
 
-  constructor() {
+  constructor(public router: Router) {
   }
 
   ngOnInit() {
@@ -78,5 +79,13 @@ export class HeaderComponent implements OnInit, AfterViewChecked, OnChanges, OnD
 
   getMsg() {
     return {name: 'zhang'};
+  }
+
+  go_home() {
+    console.log(this.router.navigate(['/user'], {
+      queryParams: {
+        id: 'aaaaaaa'
+      },
+    }));
   }
 }

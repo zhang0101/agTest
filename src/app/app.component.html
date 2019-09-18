@@ -1,8 +1,125 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h2 (click)="toHead()">改变传值</h2>
-<input [(ngModel)]="inputValue" type="text" [appHighlight] = "'red'" (outer)="runParent($event)">
-<app-header [msg]="title" (outer)="runParent($event)" #headerFunc></app-header>
-<!--<app-breadcrumb></app-breadcrumb>-->
-<div  [@routeAnimation]="routerState">
-  <router-outlet></router-outlet>
+<!--<h2 (click)="toHead()">改变传值</h2>-->
+<!--<input [(ngModel)]="inputValue" type="text" [appHighlight] = "'red'" (outer)="runParent($event)">-->
+<!--<app-header [msg]="title" (outer)="runParent($event)" #headerFunc></app-header>-->
+<!--<div  [@routeAnimation]="routerState">-->
+  <!--<router-outlet></router-outlet>-->
+<!--</div>-->
+<!--
+<app-solt>
+    <div l>
+        <p>那么：<i>name</i></p>
+    </div>
+    &lt;!&ndash;<div class="r">&ndash;&gt;
+        &lt;!&ndash;1111111111111111111111111&ndash;&gt;
+    &lt;!&ndash;</div>&ndash;&gt;
+    <div r>
+        1111111111111111111111111
+    </div>
+</app-solt>
+<nz-divider></nz-divider><br>
+<div>
+    <a [routerLink]="['/user']" [routerLinkActive]="'active'">用户模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a [routerLink]="['/product']" [routerLinkActive]="'active'">产品模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a [routerLink]="['/article']" [routerLinkActive]="'active'">评论模块</a>
 </div>
+-->
+<!--{{10000|sexReform}}-->
+<ng-scrollbar class="a"  #scrollable barClass="main-scrollbar" [invertY]="false" [compact]="false">
+    <div style="padding-right: 20px">
+        <br>
+        <br>
+        <button nz-button nzType="primary" (click)="add()">加法</button>
+        <br>
+        <br>
+        <button nz-button (click)="reduce()">减法</button>
+        <app-loading></app-loading>
+        <input nz-input type="text" [(ngModel)]="title" appInputTrim>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</ng-scrollbar>

@@ -21,7 +21,7 @@ const routes: Routes = [
         path: 'pcontent', component: PcontentComponent, data: {title: '张震 -->pcontent', path: 'pcontent'}
       }, {
         path: 'test', data: {title: '张震 -->test'},
-        loadChildren: './components/test/test.module#TestModule',
+        loadChildren: () => import('./components/test/test.module').then(m => m.TestModule),
       }
     ]
   }

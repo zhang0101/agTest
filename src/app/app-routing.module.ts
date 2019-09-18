@@ -7,13 +7,13 @@ import {AboutComponent} from './views/about/about.component';
 
 const routes: Routes = [
   {
-    path: 'user', loadChildren: './module/user/user.module#UserModule', data: {title: 'USER -- 张震', path: 'user'}
+    path: 'user', loadChildren: () => import('./module/user/user.module').then(m => m.UserModule), data: {title: 'USER -- 张震',  breadcrumb: 'user'}
   },
   {
-    path: 'product', loadChildren: './module/product/product.module#ProductModule',
+    path: 'product', loadChildren: () => import('./module/product/product.module').then(m => m.ProductModule),
   },
   {
-    path: 'article', loadChildren: './module/article/article.module#ArticleModule', data: {title: 'ARTICLE -- 张震', path: 'article'}
+    path: 'article', loadChildren: () => import('./module/article/article.module').then(m => m.ArticleModule), data: {title: 'ARTICLE -- 张震', breadcrumb: 'article'}
   },
   {
     path: '**', redirectTo: 'user'
