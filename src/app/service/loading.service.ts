@@ -10,7 +10,7 @@ export class LoadingService {
     constructor() {
     }
 
-    getLoding(): Observable<boolean> {
+    getLoading(): Observable<boolean> {
         return this.loadingSubject.asObservable();
     }
 

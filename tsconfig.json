@@ -22,7 +22,8 @@
     "paths": {
       "@share/*": [ "app/shareCommon/*" ],
       "@pipe/*": [ "app/pipe/*" ],
-      "@app/*": [ "app/*" ]
+      "@app/*": [ "app/*" ],
+      "@assets/*": [ "assets/*" ]
     }
   }
 }

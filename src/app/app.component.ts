@@ -47,6 +47,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     // router跳转动画所需参数
     routerState = true;
+    trim = 'all';
 
     // routerStateCode = 'active';
 
@@ -99,8 +100,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     // }*/
 
     add() {
-        this.store.dispatch(new Increment())
-        // this.store.select('count').subscribe(res => {
+        this.trim = 'right';
+        // this.store.dispatch(new Increment());
+        // this.store.select('count').subscribe( vres => {
         //     console.log(res)
         //     if(res.count){
         //         this.loadingService.loading(true);
@@ -118,6 +120,11 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 
     reduce() {
+        this.trim = 'left';
+        this.store.dispatch(new Decrement());
+    }
 
+    trim2() {
+        this.trim = 'trim';
     }
 }

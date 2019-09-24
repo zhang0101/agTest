@@ -1,4 +1,4 @@
-import {Directive, ElementRef, HostListener, NgModule} from '@angular/core';
+import {Directive, ElementRef, HostListener, Input, NgModule} from '@angular/core';
 import {NgControl} from '@angular/forms';
 
 @Directive({
@@ -6,24 +6,53 @@ import {NgControl} from '@angular/forms';
 })
 
 export class InputTrimDirective {
+    /**TODO 输入框去空格规则
+     *      all： 所有空格
+     *      trim： 前后空格
+     *      left： 左空格
+     *      right: 右空格
+     *      默认为去前后空格
+     */
+
+    @Input('appInputTrim') trim;
 
     constructor(
         private elementRef: ElementRef,
-        private control: NgControl
+        private control: NgControl,
     ) {
     }
 
-    @HostListener('keydown', ['$event'])
-    keydownFun(evt) {
+    @HostListener('keydown', ['$event', '$event.target'])
+    keydownFun(evt, target) {
         if (evt.key.trim() === '') {
-            evt.preventDefault();
+            switch ( this.trim ) {
+                case 'all':
+                    evt.preventDefault();
+                    break;
+            }
         }
     }
 
     @HostListener('keyup', ['$event', '$event.target'])
     keyupFun(evt, target) {
         if (target.value) {
-            this.control.control.setValue(target.value.replace(/(\s*)/g, ''));
+            switch ( this.trim ) {
+                case 'all':
+                    this.control.control.setValue(target.value.replace(/(\s*)/mg, ''));
+                    break;
+                case 'trim':
+                    this.control.control.setValue(target.value.trim());
+                    break;
+                case 'left':
+                    this.control.control.setValue(target.value.replace(/(^\s*)/g, ''));
+                    break;
+                case 'right':
+                    this.control.control.setValue(target.value.replace(/(\s*)$/g, ''));
+                    break;
+                default:
+                    this.control.control.setValue(target.value.trim());
+                    break;
+            }
         }
     }
 }

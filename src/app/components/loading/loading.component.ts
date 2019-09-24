@@ -13,7 +13,7 @@ export class  LoadingComponent implements OnInit {
     constructor(private loadingService: LoadingService) {}
 
     ngOnInit() {
-        this.loadingService.getLoding().subscribe(loading => {
+        this.loadingService.getLoading().subscribe(loading => {
             this.showLoading = loading;
         });
     }
