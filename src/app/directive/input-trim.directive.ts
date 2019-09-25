@@ -23,7 +23,7 @@ export class InputTrimDirective {
     }
 
     @HostListener('keydown', ['$event', '$event.target'])
-    keydownFun(evt, target) {
+    keydownFun(evt) {
         if (evt.key.trim() === '') {
             switch ( this.trim ) {
                 case 'all':
@@ -38,7 +38,7 @@ export class InputTrimDirective {
         if (target.value) {
             switch ( this.trim ) {
                 case 'all':
-                    this.control.control.setValue(target.value.replace(/(\s*)/mg, ''));
+                    this.control.control.setValue(target.value.replace(/(\s*)/g, ''));
                     break;
                 case 'trim':
                     this.control.control.setValue(target.value.trim());
