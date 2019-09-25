@@ -20,6 +20,7 @@ import {StoreModule} from '@ngrx/store';
 import {NgScrollbarModule} from 'ngx-scrollbar';
 import { LoadingComponent } from './components/loading/loading.component';
 import {LoadingService} from '@app/service/loading.service';
+import { reducers, metaReducers } from './reducers';
 registerLocaleData(zh);
 
 
@@ -42,7 +43,14 @@ registerLocaleData(zh);
         FormsModule,
         HttpClientModule,
         NgScrollbarModule,
-        StoreModule.forRoot({count: conterReducer})
+        StoreModule.forRoot({count: conterReducer}),
+        StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true
+      }
+    })
     ],
     providers: [LoadingService,{provide: NZ_I18N, useValue: zh_CN}],
     bootstrap: [AppComponent]
