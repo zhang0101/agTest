@@ -25,7 +25,7 @@
 </div>
 -->
 <!--{{10000|sexReform}}-->
-<ng-scrollbar class="a" style="height: 300px"  #scrollable barClass="main-scrollbar" [invertY]="false" [compact]="false">
+<ng-scrollbar class="a" style="height: 500px"  #scrollable barClass="main-scrollbar" [invertY]="false" [compact]="false">
     <div style="padding-right: 20px">
         <br>
         <br>
@@ -35,7 +35,19 @@
         <button nz-button (click)="reduce()">减法</button>
         <button nz-button (click)="trim2()">trim2</button>
         <app-loading></app-loading>
+        <br>
+        <br>
+        <br>
+        <div>Current Count: {{ (count$| async) }}</div>
+        <br>
+        <button id="increment" (click)="increment()">Increment</button>
+        <br>
+        <button id="decrement" (click)="decrement()">Decrement</button>
+        <br>
+        <button id="reset" (click)="reset()">Reset Counter</button>
+        <br>
+        <button id="login" (click)="login()">Reset Counter</button>
+        <br>
         <input nz-input type="text" [(ngModel)]="title" appInputTrim>
-        <img src="./assets/1.jpg">
     </div>
 </ng-scrollbar>

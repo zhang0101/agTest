@@ -14,13 +14,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import {SoltComponent} from './components/solt/solt.component';
-import { conterReducer } from '@app/store/app';
 import {StoreModule} from '@ngrx/store';
-
 import {NgScrollbarModule} from 'ngx-scrollbar';
-import { LoadingComponent } from './components/loading/loading.component';
+import {LoadingComponent} from './components/loading/loading.component';
 import {LoadingService} from '@app/service/loading.service';
-import { reducers, metaReducers } from './reducers';
+import {counterReducer } from '@app/store/scoreboard/scoreboard.reducer';
+import {AppReducers} from '@app/store';
 registerLocaleData(zh);
 
 
@@ -43,16 +42,9 @@ registerLocaleData(zh);
         FormsModule,
         HttpClientModule,
         NgScrollbarModule,
-        StoreModule.forRoot({count: conterReducer}),
-        StoreModule.forRoot(reducers, {
-      metaReducers,
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true
-      }
-    })
+        StoreModule.forRoot(AppReducers)
     ],
-    providers: [LoadingService,{provide: NZ_I18N, useValue: zh_CN}],
+    providers: [LoadingService, {provide: NZ_I18N, useValue: zh_CN}],
     bootstrap: [AppComponent]
 })
 export class AppModule {

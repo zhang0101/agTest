@@ -1,14 +1,14 @@
 import {Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
 import {Router, ActivatedRoute, NavigationEnd} from '@angular/router';
 import {Title} from '@angular/platform-browser';
-
-
 import {animate, group, query, style, transition, trigger} from '@angular/animations';
-
 import {LoadingService} from './service/loading.service';
-import * as $ from 'jquery';
-import {Store} from '@ngrx/store';
-import {conterReducer, CounterState, Decrement, Increment} from '@app/store/app';
+import {select, Store} from '@ngrx/store';
+import {decrement, increment, reset} from '@app/store/scoreboard/scoreboard.actions';
+import {Observable} from 'rxjs';
+import * as AppFrom from '@app/store';
+import {login} from '@app/store/login/scoreboard.actions';
+
 // import {NgModel} from "@angular/forms";
 
 @Component({
@@ -32,99 +32,63 @@ import {conterReducer, CounterState, Decrement, Increment} from '@app/store/app'
 })
 
 export class AppComponent implements OnInit, AfterViewInit {
+
+    count$: Observable<number>;
+
     constructor(
         private router: Router,
         private activatedRoute: ActivatedRoute,
         private titleService: Title,
         private loadingService: LoadingService,
-        private store: Store<CounterState>,
+        private store: Store<AppFrom.AppState>
     ) {
+        this.count$ = store.pipe(select(AppFrom.selectNum));
+        store.select(AppFrom.selectInfo).subscribe(res => {
+           console.log(res);
+        });
     }
 
     title = 'agTest';
-    @ViewChild('headerFunc', { static: false }) headerFunc;
-    inputValue = '练习一下';
-
-    // router跳转动画所需参数
-    routerState = true;
+    @ViewChild('headerFunc', {static: false}) headerFunc;
     trim = 'all';
 
-    // routerStateCode = 'active';
-
-
     ngOnInit() {
-        // this.headerFunc.getMsg();
-        // this.setTitle();
-        // this.setRouterAnimations();
     }
 
     ngAfterViewInit(): void {
-
     }
-
-    // setRouterAnimations() {
-    //     this.router.events.subscribe(event => {
-    //         if (event instanceof NavigationEnd) {
-    //             // 每次路由跳转改变状态
-    //             this.routerState = !this.routerState;
-    //             // this.routerStateCode = this.routerStateCode !== 'active' ? 'active' : 'inactive';
-    //         }
-    //     });
-    // }
-
-    // /*setTitle() {
-    //   this.router.events.pipe(
-    //     filter(event => event instanceof NavigationEnd),
-    //     map(() => this.activatedRoute),
-    //     map(route => {
-    //       while (route.firstChild) {
-    //         route = route.firstChild;
-    //       }
-    //       return route;
-    //     }),
-    //     mergeMap(route => route.data))
-    //     .subscribe((event) => {
-    //       if (!event.title) {
-    //         return false;
-    //       }
-    //       this.titleService.setTitle(event.title);
-    //     });
-    // }
-    //
-    // toHead() {
-    //   this.title = 'agTest-->父向子传值';
-    // }
-    //
-    // runParent(msg: string) {
-    //   console.log(msg);
-    // }*/
 
     add() {
         this.trim = 'right';
-        // this.store.dispatch(new Increment());
-        // this.store.select('count').subscribe( vres => {
-        //     console.log(res)
-        //     if(res.count){
-        //         this.loadingService.loading(true);
-        //         setTimeout(() => {
-        //             this.store.dispatch(new Decrement())
-        //         }, 1000);
-        //     }else {
-        //         this.loadingService.loading(false);
-        //     }
-        //
-        // })
-
-
     }
-
 
     reduce() {
         this.trim = 'left';
-        this.store.dispatch(new Decrement());
+        // this.store.dispatch(new Decrement());
     }
 
     trim2() {
         this.trim = 'trim';
+    }
+
+
+    increment() {
+        this.store.dispatch(increment());
+    }
+
+    decrement() {
+        this.store.dispatch(decrement({num: 3}));
+    }
+
+    reset() {
+        this.store.dispatch(reset([true]));
+    }
+
+    login() {
+        const info = {
+            username: 'zhangzhen',
+            password: 'zhangzhen'
+        }
+        this.store.dispatch(login({info}));
     }
 }
