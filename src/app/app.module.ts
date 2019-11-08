@@ -20,6 +20,7 @@ import {LoadingComponent} from './components/loading/loading.component';
 import {LoadingService} from '@app/service/loading.service';
 import {counterReducer } from '@app/store/scoreboard/scoreboard.reducer';
 import {AppReducers} from '@app/store';
+import { CalendarWeekComponent } from './components/calendar-week/calendar-week.component';
 registerLocaleData(zh);
 
 
@@ -31,6 +32,7 @@ registerLocaleData(zh);
         HeaderComponent,
         SoltComponent,
         LoadingComponent,
+        CalendarWeekComponent,
         // InputTrimDirective,
     ],
     imports: [

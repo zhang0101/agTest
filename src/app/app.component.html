@@ -1,32 +1,46 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!--<h2 (click)="toHead()">改变传值</h2>-->
-<!--<input [(ngModel)]="inputValue" type="text" [appHighlight] = "'red'" (outer)="runParent($event)">-->
-<!--<app-header [msg]="title" (outer)="runParent($event)" #headerFunc></app-header>-->
-<!--<div  [@routeAnimation]="routerState">-->
-  <!--<router-outlet></router-outlet>-->
-<!--</div>-->
-<!--
-<app-solt>
-    <div l>
-        <p>那么：<i>name</i></p>
+<ng-scrollbar>
+<div class="container">
+    <app-calendar-week></app-calendar-week>
+    The content below is only a placeholder and can be replaced.
+    <h2 (click)="toHead()">改变传值</h2>
+    <input [(ngModel)]="inputValue" type="text" [appHighlight]="'red'" (outer)="runParent($event)">
+    <app-header [msg]="title" (outer)="runParent($event)" #headerFunc></app-header>
+    <div [@routeAnimation]="routerState">
+        <router-outlet></router-outlet>
     </div>
-    &lt;!&ndash;<div class="r">&ndash;&gt;
-        &lt;!&ndash;1111111111111111111111111&ndash;&gt;
-    &lt;!&ndash;</div>&ndash;&gt;
-    <div r>
+    <app-solt>
+        <div l>
+            <p>那么：<i>name</i></p>
+        </div>
+        <!--<div class="r">
         1111111111111111111111111
-    </div>
-</app-solt>
-<nz-divider></nz-divider><br>
-<div>
-    <a [routerLink]="['/user']" [routerLinkActive]="'active'">用户模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a [routerLink]="['/product']" [routerLinkActive]="'active'">产品模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a [routerLink]="['/article']" [routerLinkActive]="'active'">评论模块</a>
-</div>
--->
-<!--{{10000|sexReform}}-->
-<ng-scrollbar class="a" style="height: 500px"  #scrollable barClass="main-scrollbar" [invertY]="false" [compact]="false">
-    <div style="padding-right: 20px">
+        </div>
+        <div r>
+        1111111111111111111111111
+        </div>
+        </app-solt>
+        <nz-divider></nz-divider><br>
+        <div>
+        <a [routerLink]="['/user']" [routerLinkActive]="'active'">用户模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a [routerLink]="['/product']" [routerLinkActive]="'active'">产品模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a [routerLink]="['/article']" [routerLinkActive]="'active'">评论模块</a>
+        </div>
+        -->
+        {{10000|sexReform}}
+        <br>
+        <br>
+        <br>
+        <label>时间</label>
+
+        <br>
+        <br>
+
+
+        <div class="a">
+
+        </div>
+    </app-solt>
+    <div>
         <br>
         <br>
         <button nz-button nzType="primary" (click)="add()">加法</button>
@@ -50,4 +64,386 @@
         <br>
         <input nz-input type="text" [(ngModel)]="title" appInputTrim>
     </div>
+    <h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul>
+</div>
 </ng-scrollbar>

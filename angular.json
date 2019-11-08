@@ -32,6 +32,7 @@
                             }
                         ],
                         "styles": [
+                            "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "src/theme.less",
                             "src/styles.scss"
                         ],
@@ -90,13 +91,12 @@
                         "tsConfig": "src/tsconfig.spec.json",
                         "karmaConfig": "src/karma.conf.js",
                         "styles": [
-                            "src/styles.scss",
-                            "node_modules/jquery-asScrollbar/dist/css/jquery-asScrollbar.css"
+                            "src/styles.scss"
                         ],
                         "scripts": [
                             "node_modules/jquery/dist/jquery.min.js",
                             "node_modules/jquery.mousewheel/jquery.mousewheel.js",
-                            "node_modules/jquery-asScrollbar/dist/jquery-asScrollbar.min.js"
+                            "node_modules/jquery-asScrollbar/dist/jquery-asScrollbar.min.js",
                         ],
                         "assets": [
                             "src/favicon.ico",

@@ -1,5 +1,5 @@
-import {Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
-import {Router, ActivatedRoute, NavigationEnd} from '@angular/router';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 import {animate, group, query, style, transition, trigger} from '@angular/animations';
 import {LoadingService} from './service/loading.service';
@@ -8,8 +8,7 @@ import {decrement, increment, reset} from '@app/store/scoreboard/scoreboard.acti
 import {Observable} from 'rxjs';
 import * as AppFrom from '@app/store';
 import {login} from '@app/store/login/scoreboard.actions';
-
-// import {NgModel} from "@angular/forms";
+import * as $ from 'jquery';
 
 @Component({
     selector: 'app-root',
@@ -44,18 +43,21 @@ export class AppComponent implements OnInit, AfterViewInit {
     ) {
         this.count$ = store.pipe(select(AppFrom.selectNum));
         store.select(AppFrom.selectInfo).subscribe(res => {
-           console.log(res);
+            console.log(res);
         });
     }
 
     title = 'agTest';
     @ViewChild('headerFunc', {static: false}) headerFunc;
     trim = 'all';
+    routerState: any;
+    inputValue: any;
 
     ngOnInit() {
     }
 
     ngAfterViewInit(): void {
+
     }
 
     add() {
@@ -88,7 +90,14 @@ export class AppComponent implements OnInit, AfterViewInit {
         const info = {
             username: 'zhangzhen',
             password: 'zhangzhen'
-        }
+        };
         this.store.dispatch(login({info}));
+    }
+
+    runParent($event: string) {
+    }
+
+    toHead() {
+
     }
 }
