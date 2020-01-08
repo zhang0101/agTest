@@ -1,32 +1,8 @@
-<!--
-<h2>
-  <a routerLink="home/{{rander}}" [routerLinkActive]="'active'" (click)="load()">home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a routerLink="about" [routerLinkActive]="'active'">about</a>
-</h2>
--->
-<nz-breadcrumb [nzAutoGenerate]="true"></nz-breadcrumb>
 <div>
-  <h2 (click)="postMsg()">{{msg}}</h2>
-  <span *ngFor="let item of headerList;let index=index">
-    <a [routerLink]="item.path" [routerLinkActive]="'active'" [queryParams]="{id:'zhangzhen'}" (click)="changeColor()"
-       [classList]="['index_'+index,'any']">{{item.name}}</a>
-    <span *ngIf="index!==headerList.length-1">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-  </span>
-</div>
-
-<br>
-<br>
-{{time|date:'yyyy-MM-dd HH:mm:ss'}}
-
-<br>
-<br>
-<p (click)="go_home()"> {{ sex | sexReform:10 }}</p>
-
-<p class="{{ sex | sexReform:10 }}"></p>
-<br>
-<!--<div>
   <a [routerLink]="['/user']" [routerLinkActive]="'active'">用户模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <a [routerLink]="['/product']" [routerLinkActive]="'active'">产品模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a [routerLink]="['/article']" [routerLinkActive]="'active'">评论模块</a>
-</div>-->
+  <a [routerLink]="['/article']" [routerLinkActive]="'active'">评论模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a [routerLink]="['/home/1212']" [routerLinkActive]="'active'">HOME</a>
+</div>
 
+<button (click)="go_home()">1111111111</button>

@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: '', component: TestComponent,
     children: [{
-      path: 'test1', component: Test1Component, data: {title: 'test1', path: 'test1'},
+      path: 'test1', component: Test1Component, data: {title: '测试内容', breadcrumb: 'test1'},
     }]
   }
 ];

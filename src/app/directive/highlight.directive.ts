@@ -28,11 +28,11 @@ export class HighlightDirective implements AfterViewInit, OnInit {
   }
 
   ngOnInit() {
-    console.log(this.highlightColor);
+    // console.log(this.highlightColor);
   }
 
   ngAfterViewInit() {
     this.el.nativeElement.focus();
-    console.log(this.el.nativeElement);
+    // console.log(this.el.nativeElement);
   }
 }

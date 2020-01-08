@@ -11,16 +11,16 @@ import {ShareModule} from '@share/share.module';
 import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import {registerLocaleData} from '@angular/common';
+import {HashLocationStrategy, LocationStrategy, registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import {SoltComponent} from './components/solt/solt.component';
-import {StoreModule} from '@ngrx/store';
 import {NgScrollbarModule} from 'ngx-scrollbar';
+import {UEditorModule} from 'ngx-ueditor';
 import {LoadingComponent} from './components/loading/loading.component';
 import {LoadingService} from '@app/service/loading.service';
-import {counterReducer } from '@app/store/scoreboard/scoreboard.reducer';
-import {AppReducers} from '@app/store';
-import { CalendarWeekComponent } from './components/calendar-week/calendar-week.component';
+import {BreadcrumbsService} from '@app/service/breadcrumbs.service';
+import {CalendarWeekComponent} from './components/calendar-week/calendar-week.component';
+
 registerLocaleData(zh);
 
 
@@ -40,13 +40,26 @@ registerLocaleData(zh);
         AppRoutingModule,
         ShareModule,
         BrowserAnimationsModule,
-        NgZorroAntdModule,
         FormsModule,
         HttpClientModule,
         NgScrollbarModule,
-        StoreModule.forRoot(AppReducers)
+        UEditorModule.forRoot({
+            js: [
+                `./assets/ueditor/ueditor.config.js`,
+                `./assets/ueditor/ueditor.all.min.js`,
+            ],
+            // 默认前端配置项
+            options: {
+                UEDITOR_HOME_URL: './assets/ueditor/'
+            }
+        })
     ],
-    providers: [LoadingService, {provide: NZ_I18N, useValue: zh_CN}],
+    providers: [
+        LoadingService,
+        BreadcrumbsService,
+        {provide: NZ_I18N, useValue: zh_CN},
+        {provide: LocationStrategy, useClass: HashLocationStrategy},
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

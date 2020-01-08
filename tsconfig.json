@@ -23,7 +23,9 @@
       "@share/*": [ "app/shareCommon/*" ],
       "@pipe/*": [ "app/pipe/*" ],
       "@app/*": [ "app/*" ],
-      "@assets/*": [ "assets/*" ]
+      "@assets/*": [ "assets/*" ],
+      "@store/*": [ "app/store/*" ],
+      "@service/*": [ "app/service/*" ]
     }
   }
 }

@@ -14,13 +14,13 @@ const routes: Routes = [
         path: '', redirectTo: 'plist'
       },
       {
-        path: 'plist', component: PlistComponent, data: {title: '张震 -->plist', path: 'plist'}
+        path: 'plist', component: PlistComponent, data: { breadcrumb: '商品列表'}
       }, {
-        path: 'cart', component: CartComponent, data: {title: '张震 -->cart', path: 'plist'}
+        path: 'cart', component: CartComponent, data: { breadcrumb: '购物车'}
       }, {
-        path: 'pcontent', component: PcontentComponent, data: {title: '张震 -->pcontent', path: 'pcontent'}
+        path: 'pcontent', component: PcontentComponent, data: { breadcrumb: '内容展示'}
       }, {
-        path: 'test', data: {title: '张震 -->test'},
+        path: 'test', data: { breadcrumb: ''},
         loadChildren: () => import('./components/test/test.module').then(m => m.TestModule),
       }
     ]
