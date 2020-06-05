@@ -16,4 +16,7 @@ export class ProductComponent implements OnInit {
 
   }
 
+    routerLinkFn(item) {
+        // this.router.navigate([item]);
+    }
 }

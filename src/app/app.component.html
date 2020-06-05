@@ -9,8 +9,8 @@
                 <span style=" white-space:pre">各     位好：</span><span>111</span>
             </div>
         </div>
-        <br>
-        <app-header [msg]="title" (outer)="runParent($event)" #headerFunc></app-header>
+        <!--<br>-->
+        <app-header  (outer)="runParent($event)" #headerFunc></app-header>
         <div [@routeAnimation]="routerState">
             <router-outlet></router-outlet>
         </div>

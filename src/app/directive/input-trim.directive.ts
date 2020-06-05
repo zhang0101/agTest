@@ -1,4 +1,4 @@
-import {Directive, ElementRef, HostListener, Input, NgModule, OnInit} from '@angular/core';
+import {Directive, ElementRef, HostListener, Input, OnInit} from '@angular/core';
 import {NgControl} from '@angular/forms';
 
 @Directive({

@@ -1,13 +1,13 @@
 <div>
-  <a [routerLink]="['plist']" [routerLinkActive]="'active'">商品列表</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a [routerLink]="['cart']" [routerLinkActive]="'active'">购物车</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a [routerLink]="['pcontent']" [routerLinkActive]="'active'">内容展示</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a [routerLink]="['test']" [routerLinkActive]="'active'">内容展示test</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <input appHighlight type="text">
-</div>
-
-<app-breadcrumb></app-breadcrumb>
-
-<div>
-  <router-outlet></router-outlet>
+    <div>
+        <a [routerLink]="['plist']" [routerLinkActive]="'active'" (click)="routerLinkFn('product/plist')">商品列表</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a [routerLink]="['cart']" [routerLinkActive]="'active'" queryParamsHandling  (click)="routerLinkFn('product/cart')">购物车</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a [routerLink]="['pcontent']" [routerLinkActive]="'active'" queryParamsHandling  (click)="routerLinkFn('product/pcontent')">内容展示</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a [routerLink]="['test']" [routerLinkActive]="'active'" queryParamsHandling  (click)="routerLinkFn('product/test')">内容展示test</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <input appHighlight type="text">
+    </div>
+    <app-breadcrumb></app-breadcrumb>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
 </div>

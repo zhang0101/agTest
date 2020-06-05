@@ -1,14 +1,15 @@
 import {Injectable} from '@angular/core';
 import {filter} from 'rxjs/operators';
-import {ActivatedRoute, NavigationEnd, Params, PRIMARY_OUTLET, Router} from '@angular/router';
+import {ActivatedRoute, NavigationEnd, PRIMARY_OUTLET, Router} from '@angular/router';
 
 import {Store} from '@ngrx/store';
 import {AppStoreModule} from '@store/store.module';
 import {addBreadcrumb, BreadcrumbType} from '@store/actions';
+import {ServiceModule} from '@service/service.module';
 
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: ServiceModule
 })
 export class BreadcrumbsService {
     breadcrumbs: BreadcrumbType[];

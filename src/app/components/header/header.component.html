@@ -1,8 +1,9 @@
 <div>
-  <a [routerLink]="['/user']" [routerLinkActive]="'active'">用户模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a [routerLink]="['/product']" [routerLinkActive]="'active'">产品模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a [routerLink]="['/user/1212']" [routerLinkActive]="'active'">用户模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a [routerLink]="['/product', 1111]" [routerLinkActive]="'active'">产品模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <a [routerLink]="['/article']" [routerLinkActive]="'active'">评论模块</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <a [routerLink]="['/home/1212']" [routerLinkActive]="'active'">HOME</a>
 </div>
 
-<button (click)="go_home()">1111111111</button>
+<button (click)="go_home()" appHighlight>{{1111111111 | sexReform}}</button>
+<input type="text" nz-input [(ngModel)]="title" (ngModelChange)="go_home()">

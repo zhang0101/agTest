@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {Routes, RouterModule, RouteReuseStrategy} from '@angular/router';
 import {ProductComponent} from './product.component';
 
 import {PlistComponent} from './components/plist/plist.component';
@@ -10,9 +10,9 @@ const routes: Routes = [
   {
     path: '', component: ProductComponent,
     children: [
-      {
-        path: '', redirectTo: 'plist'
-      },
+      // {
+      //   path: '', redirectTo: 'plist'
+      // },
       {
         path: 'plist', component: PlistComponent, data: { breadcrumb: '商品列表'}
       }, {
@@ -20,7 +20,7 @@ const routes: Routes = [
       }, {
         path: 'pcontent', component: PcontentComponent, data: { breadcrumb: '内容展示'}
       }, {
-        path: 'test', data: { breadcrumb: ''},
+        path: 'test', data: { breadcrumb: '', keep: true},
         loadChildren: () => import('./components/test/test.module').then(m => m.TestModule),
       }
     ]
@@ -29,7 +29,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ProductRoutingModule {
 }

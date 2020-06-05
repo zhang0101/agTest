@@ -7,16 +7,17 @@ import {PlistComponent} from './components/plist/plist.component';
 import {CartComponent} from './components/cart/cart.component';
 import {PcontentComponent} from './components/pcontent/pcontent.component';
 
-// @ts-ignore
 import {ShareModule} from '@share/share.module';
+import {PagesModule} from '@app/pages/pages.module';
 
 @NgModule({
-  declarations: [ProductComponent, PlistComponent, CartComponent, PcontentComponent],
-  imports: [
-    CommonModule,
-    ProductRoutingModule,
-    ShareModule
-  ]
+    declarations: [ProductComponent, PlistComponent, CartComponent, PcontentComponent],
+    imports: [
+        CommonModule,
+        ProductRoutingModule,
+        ShareModule,
+        PagesModule,
+    ]
 })
 export class ProductModule {
 }

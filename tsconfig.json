@@ -20,12 +20,13 @@
       "dom"
     ],
     "paths": {
-      "@share/*": [ "app/shareCommon/*" ],
+      "@share/*": [ "app/share/*" ],
       "@pipe/*": [ "app/pipe/*" ],
       "@app/*": [ "app/*" ],
       "@assets/*": [ "assets/*" ],
       "@store/*": [ "app/store/*" ],
-      "@service/*": [ "app/service/*" ]
+      "@service/*": [ "app/service/*" ],
+      "@directive/*": [ "app/directive/*" ],
     }
   }
 }

@@ -9,7 +9,6 @@ import {UEditorComponent} from 'ngx-ueditor';
 import {select, Store} from '@ngrx/store';
 import {AppStoreModule} from '@store/store.module';
 import {getBookList} from '@store/selectors';
-import {Logs} from '@app/logs/logs';
 
 
 declare const UE: any;
@@ -24,7 +23,6 @@ declare const UE: any;
             transition('* => *', [
                 query(':leave', style({transform: 'translateX(0)', position: 'absolute'}), {optional: true}),
                 query(':enter', style({transform: 'translateX(100%)', position: 'absolute'}), {optional: true}),
-
                 group([
                     query(':leave', animate('.5s ease-in-out', style({transform: 'translateX(-100%)'})), {optional: true}),
                     query(':enter', animate('.5s ease-in-out', style({transform: 'translateX(0)'})), {optional: true})
@@ -73,11 +71,12 @@ export class AppComponent  implements OnInit, AfterViewInit {
         {name: '33333', path: 'c'},
         {name: '44444', path: 'd'},
     ];
+    titl: any;
 
     ngOnInit() {
         this.breadcrumbsService.initBreadcrumbs();
         this.store.pipe(select('book' as any), select(getBookList)).subscribe(res => {
-            console.log(res)
+            console.log(res , '-> res');
         });
     }
 
@@ -89,5 +88,13 @@ export class AppComponent  implements OnInit, AfterViewInit {
     dispatch() {
         console.log(this.headerFunc);
         // this.store.dispatch(addBook({book: {bookName: '这个是书名'}}));
+    }
+
+    runParent($event: any) {
+        console.log('->$event', $event)
+    }
+
+    ionTabsWillChange($event: { tab: string }) {
+        console.log($event)
     }
 }
