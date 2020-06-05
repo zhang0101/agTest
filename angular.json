@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "agTest": {
+        "ag-test": {
             "root": "",
             "sourceRoot": "src",
             "projectType": "application",
@@ -17,7 +17,8 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/agTest",
+            "aot": true,
+                        "outputPath": "dist/ag-test",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -67,7 +68,11 @@
                                     "type": "initial",
                                     "maximumWarning": "2mb",
                                     "maximumError": "5mb"
-                                }
+                                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
                             ]
                         }
                     }
@@ -75,18 +80,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "agTest:build"
+                        "browserTarget": "ag-test:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "agTest:build:production"
+                            "browserTarget": "ag-test:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "agTest:build"
+                        "browserTarget": "ag-test:build"
                     }
                 },
                 "test": {
@@ -130,7 +135,7 @@
                 }
             }
         },
-        "agTest-e2e": {
+        "ag-test-e2e": {
             "root": "e2e/",
             "projectType": "application",
             "prefix": "",
@@ -139,11 +144,11 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "agTest:serve"
+                        "devServerTarget": "ag-test:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "agTest:serve:production"
+                            "devServerTarget": "ag-test:serve:production"
                         }
                     }
                 },
@@ -159,5 +164,5 @@
             }
         }
     },
-    "defaultProject": "agTest"
+    "defaultProject": "ag-test"
 }

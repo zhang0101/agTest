@@ -3,7 +3,7 @@ import {ActivatedRoute, NavigationEnd, Params, PRIMARY_OUTLET, Router} from '@an
 // import {BreadcrumbsService} from '@app/service/breadcrumbs.service';
 import {select, Store} from '@ngrx/store';
 import {AppStoreModule} from '@store/store.module';
-import {getBreadcrumbList} from '@store/selectors';
+import {getBreadcrumb, getBreadcrumbList} from '@store/selectors';
 import {addBreadcrumbOne} from '@store/actions';
 
 interface IBreadcrumb {
@@ -27,8 +27,8 @@ export class BreadcrumbComponent implements OnInit, AfterViewChecked {
         // private breadcrumbsService: BreadcrumbsService,
         private store: Store<AppStoreModule>
     ) {
-        const a = this.store.pipe(select('breadcrumb'));
-        this.store.pipe(select('breadcrumb'), select(getBreadcrumbList)).subscribe(res => {
+        const a = this.store.pipe(select(getBreadcrumb));
+        this.store.pipe(select(getBreadcrumb), select(getBreadcrumbList)).subscribe(res => {
             this.breadcrumbs = res;
         });
         this.store.dispatch(addBreadcrumbOne('添加子级'));

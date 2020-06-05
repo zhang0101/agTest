@@ -47,11 +47,11 @@ export class AppComponent  implements OnInit, AfterViewInit {
     count$: Observable<number>;
 
     title = 'agTest';
-    @ViewChild('headerFunc', {static: false}) headerFunc;
+    @ViewChild('headerFunc') headerFunc;
     trim = 'all';
     routerState: any;
     inputValue: any;
-    @ViewChild('full', {static: false}) full: UEditorComponent;
+    @ViewChild('full') full: UEditorComponent;
     html: string;
     config = {
         toolbars: [['fullscreen', 'source', '|', 'undo', 'redo', '|',
