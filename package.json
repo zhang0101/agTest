@@ -28,7 +28,7 @@
     "ng-zorro-antd": "^9.1.2",
     "ng-zorro-antd-mobile": "^1.0.5",
     "ngx-bootstrap": "^5.2.0",
-    "ngx-scrollbar": "^4.2.0",
+    "ngx-scrollbar": "^7.2.3",
     "ngx-ueditor": "^2.1.3",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
